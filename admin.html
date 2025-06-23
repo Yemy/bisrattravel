@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin Dashboard</title>
+        <link rel="stylesheet" href="css/style.css">
+
+        <script src="js/firebase-config.js"></script>
+    
+        <!-- Firebase App (required) -->
+        <script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js"></script>
+    
+        <!-- Firebase Authentication -->
+        <script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js"></script>
+    
+        <!-- Firebase Firestore -->
+        <script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js"></script>
+    
+        <!-- Admin Script -->
+        <script type="module" src="js/admin.js"></script>
+    </head>
+<body>
+    <div id="login-section">
+        <h2>Admin Login</h2>
+        <form id="login-form">
+            <input type="email" id="admin-email" placeholder="Email" required>
+            <input type="password" id="admin-password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <button id="google-login" class="btn">Login with Google</button>
+
+    </div>
+
+    <div id="dashboard" style="display: none;">
+        <h2>Customer Messages</h2>
+        <button id="logout">Logout</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Subject</th>
+                    <th>Message</th>
+                    <th>Timestamp</th>
+                </tr>
+            </thead>
+            <tbody id="messages-table"></tbody>
+        </table>
+    </div>
+
+</body>
+</html>
